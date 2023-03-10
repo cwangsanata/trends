@@ -1,11 +1,14 @@
 """Common utility functions for automatic grading."""
 
-import sys, os, traceback
-from doctest import DocTestFinder, DocTestRunner
-from collections import namedtuple, defaultdict
-import urllib.request, urllib.error
-import re
 import argparse
+import os
+import re
+import sys
+import traceback
+import urllib.error
+import urllib.request
+from collections import defaultdict, namedtuple
+from doctest import DocTestFinder, DocTestRunner
 
 Test = namedtuple('Test', ['name', 'fn'])
 TESTS = []

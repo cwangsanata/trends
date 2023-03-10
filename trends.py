@@ -1,12 +1,12 @@
 """Visualizing Twitter Sentiment Across America"""
 
-from data import word_sentiments, load_tweets
 from datetime import datetime
-from geo import us_states, geo_distance, make_position, longitude, latitude
-from maps import draw_state, draw_name, draw_dot, wait
 from string import ascii_letters
-from ucb import main, trace, interact, log_current_line
 
+from data import load_tweets, word_sentiments
+from geo import geo_distance, latitude, longitude, make_position, us_states
+from maps import draw_dot, draw_name, draw_state, wait
+from ucb import interact, log_current_line, main, trace
 
 ###################################
 # Phase 1: The Feelings in Tweets #

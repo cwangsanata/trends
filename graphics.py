@@ -1,7 +1,7 @@
 """The graphics module implements a simple GUI library."""
 
-import sys
 import math
+import sys
 
 try:
     import tkinter

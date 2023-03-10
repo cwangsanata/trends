@@ -1,7 +1,7 @@
 """Map drawing utilities for U.S. sentiment data."""
 
-from graphics import Canvas
 from geo import position_to_xy, us_states
+from graphics import Canvas
 
 # A fixed gradient of sentiment colors from negative (blue) to positive (red)
 # Colors chosen via Cynthia Brewer's Color Brewer (colorbrewer2.com)

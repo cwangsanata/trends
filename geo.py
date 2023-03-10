@@ -1,8 +1,10 @@
 """Geography and projection utilities."""
 
-from data import DATA_PATH
-from math import sin, cos, atan2, radians, sqrt
 from json import JSONDecoder
+from math import atan2, cos, radians, sin, sqrt
+
+from data import DATA_PATH
+
 
 def make_position(lat, lon):
     """Return a geographic position, which has a latitude and longitude."""

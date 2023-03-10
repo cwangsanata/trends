@@ -14,10 +14,10 @@ This file uses features of Python not yet covered in the course.
 
 __version__ = '1.4'
 
-from autograder import test, run_tests, check_func, check_doctest, test_eval
+from autograder import check_doctest, check_func, run_tests, test, test_eval
 
 try:
-    import trends      # Student submission
+    import trends  # Student submission
 except (SyntaxError, IndentationError) as e:
     import traceback
     print('Unfortunately, the autograder cannot run because ' +
@@ -25,8 +25,8 @@ except (SyntaxError, IndentationError) as e:
     traceback.print_exc(limit=1)
     exit(1)
 
-from ucb import main
 from maps import us_states
+from ucb import main
 
 datetime = trends.datetime
 
@@ -164,8 +164,8 @@ def problem5():
     if check_doctest('find_centroid', trends):
         return True
 
-    from geo import make_position as mp
     import geo
+    from geo import make_position as mp
 
     def make_tests():
         return (
@@ -207,8 +207,8 @@ def problem6():
     if check_doctest('find_state_center', trends):
         return True
 
-    from geo import make_position as mp
     import geo
+    from geo import make_position as mp
 
     def center_as_tuple(state):
         center = trends.find_state_center(state)

@@ -5,7 +5,8 @@ import re
 import string
 import sys
 from datetime import datetime
-from ucb import main, interact
+
+from ucb import interact, main
 
 # Look for data directory
 PY_PATH = sys.argv[0]
