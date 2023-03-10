@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:f45c17bf14f649dcedb7ed8772b747bca4a7cd59fd84ecb09eaaae6833baad48
-size 2962
-=======
 """Functions for reading data from the sentiment dictionary and tweet files."""
 
 import os
@@ -74,4 +69,3 @@ def load_tweets(make_tweet, term='my job', file_name='all_tweets.txt'):
             tweet = make_tweet(text.lower(), time, lat, lon)
             tweets.append(tweet)
     return tweets
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78

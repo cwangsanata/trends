@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:7025d67fca03bdb1ee01380c44111fa6ccafb1b93991eb6f661069bc962cfbe4
-size 2926
-=======
 """Map drawing utilities for U.S. sentiment data."""
 
 from graphics import Canvas
@@ -84,4 +79,3 @@ def message(s):
     """Display a message."""
     c = get_canvas()
     c.draw_text(s, (c.width//2, c.height//2), size=36, anchor='center')
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78

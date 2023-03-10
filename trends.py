@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:9150e212c1b3198d332f1ecea5774785aa14917ff2100191583b4114f54a21a7
-size 12797
-=======
 """Visualizing Twitter Sentiment Across America"""
 
 from data import word_sentiments, load_tweets
@@ -357,4 +352,3 @@ def run(*args):
     for name, execute in args.__dict__.items():
         if name != 'text' and execute:
             globals()[name](' '.join(args.text))
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78

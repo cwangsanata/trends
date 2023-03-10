@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:a99698c6b406bcc360fc5da7417175fd44f6948c8c5c8b1f93db23c4f7752bfb
-size 16015
-=======
 """Automatic grading script for the Trends project.
 
 Expects the following files in the current directory:
@@ -445,4 +440,3 @@ project_info = {
 @main
 def run(*args):
     run_tests(**project_info)
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78

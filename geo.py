@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:1ddd5c7d46ed4eafd4d5ad9bc6fd7a9735eb3f453aa01d9221eea3c015e4a98d
-size 3720
-=======
 """Geography and projection utilities."""
 
 from data import DATA_PATH
@@ -101,4 +96,3 @@ def load_states():
     return states
 
 us_states = load_states()
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78

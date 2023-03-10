@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:9b6f3cd84d2fb60896011cf1b65dffc5588d3329833d08ff150d00f6b2e10541
-size 7614
-=======
 """The graphics module implements a simple GUI library."""
 
 import sys
@@ -213,4 +208,3 @@ def format_color(r, g, b):
     r, g, b -- integers from 0 to 255
     """
     return '#{0:02x}{1:02x}{2:02x}'.format(int(r * 255), int(g * 255), int(b * 255))
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78

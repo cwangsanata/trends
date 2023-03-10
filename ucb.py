@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:98e7920ba2dc86e22e02354ba68b06d93bcea2a1286c439555737a14e9caf897
-size 3276
-=======
 """The UCB module contains functions specific to 61A projects at UC Berkeley."""
 
 import code
@@ -104,4 +99,3 @@ def interact(msg=None):
         msg += '    exit() or <Control>-C exits the program'
 
     code.interact(msg, None, namespace)
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78

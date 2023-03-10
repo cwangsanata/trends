@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ccc197475c6e6eb2d3c9dfe884a5883dd6cf22e89229ee50ea8d7896745e70c
-size 6185
-=======
 """Common utility functions for automatic grading."""
 
 import sys, os, traceback
@@ -168,4 +163,3 @@ def run_tests(name, remote_index, autograder_files, version, **kwargs):
     else:
         tests = TESTS
     test_all(name, tests)
->>>>>>> ee3ff00fd6cb1b5f871b302de81be40c8c958f78
