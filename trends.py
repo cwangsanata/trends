@@ -37,15 +37,15 @@ def make_tweet(text, time, lat, lon):
 
 def tweet_text(tweet):
     """Return a string, the words in the text of a tweet."""
-    "*** YOUR CODE HERE ***"
+    return tweet.text
 
 def tweet_time(tweet):
     """Return the datetime representing when a tweet was posted."""
-    "*** YOUR CODE HERE ***"
+    return tweet.time
 
 def tweet_location(tweet):
     """Return a position representing a tweet's location."""
-    "*** YOUR CODE HERE ***"
+    return make_position(tweet.lat, tweet.lon)
 
 # The tweet abstract data type, implemented as a function.
 
@@ -61,6 +61,23 @@ def make_tweet_fn(text, time, lat, lon):
     38
     """
     "*** YOUR CODE HERE ***"
+    tweet = (text, time, lat, lon)
+
+    def tweet_text():
+        return tweet[0]
+
+    def tweet_time():
+        return tweet[1]
+
+    def tweet_lat():
+        return tweet[2]
+
+    def tweet_lon():
+        return tweet[3]
+
+    return (tweet_text, tweet_time, tweet_lat, tweet_lon)
+
+        
     # Please don't call make_tweet in your solution
 
 def tweet_text_fn(tweet):
