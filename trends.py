@@ -60,20 +60,16 @@ def make_tweet_fn(text, time, lat, lon):
     >>> latitude(tweet_location_fn(t))
     38
     """
-    "*** YOUR CODE HERE ***"
-    def fn_text():
-        return text
-
-    def fn_time():
-        return time
-
-    def fn_lat():
-        return lat
-
-    def fn_lon():
-        return lon
-
-    return 
+    def tweet(key):
+        if key == 'text':
+            return text
+        elif key == 'time':
+            return time
+        elif key == 'lat':
+            return lat
+        elif key == 'lon':
+            return lon
+    return tweet
 
     # Please don't call make_tweet in your solution
 
