@@ -71,8 +71,6 @@ def make_tweet_fn(text, time, lat, lon):
             return lon
     return tweet
 
-    # Please don't call make_tweet in your solution
-
 def tweet_text_fn(tweet):
     """Return a string, the words in the text of a functional tweet."""
     return tweet('text')
@@ -111,8 +109,9 @@ def extract_words(text):
     >>> extract_words('@(cat$.on^#$my&@keyboard***@#*')
     ['cat', 'on', 'my', 'keyboard']
     """
-    "*** YOUR CODE HERE ***"
-    return text.split()  # Replace this line
+    clean_text = ''.join([char if char.isalpha() else ' ' for char in text])
+    words = clean_text.split()
+    return [word for word in words]
 
 def make_sentiment(value):
     """Return a sentiment, which represents a value that may not exist.
