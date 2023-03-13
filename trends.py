@@ -136,12 +136,12 @@ def make_sentiment(value):
 
 def has_sentiment(s):
     """Return whether sentiment s has a value."""
-    return s['sentiment']
+    return s.get('sentiment')
 
 def sentiment_value(s):
     """Return the value of a sentiment s."""
     assert has_sentiment(s), 'No sentiment value'
-    return s['value']
+    return s.get('value')
 
 def get_word_sentiment(word):
     """Return a sentiment representing the degree of positive or negative
@@ -177,11 +177,15 @@ def analyze_tweet_sentiment(tweet):
     >>> has_sentiment(analyze_tweet_sentiment(no_sentiment))
     False
     """
-    # You may change any of the lines below.
-    average = make_sentiment(None)
-    "*** YOUR CODE HERE ***"
-    return average
+    total_sentiment, count_sentiment = 0, 0
+    for word in tweet_words(tweet):
+        if has_sentiment(get_word_sentiment(word)):
+            count_sentiment += 1
+            total_sentiment += sentiment_value(get_word_sentiment(word))
 
+    if total_sentiment == 0:
+        return make_sentiment(None)
+    return make_sentiment(total_sentiment / count_sentiment)
 
 #################################
 # Phase 2: The Geometry of Maps #
