@@ -264,6 +264,20 @@ def find_state_center(polygons):
 ###################################
 # Phase 3: The Mood of the Nation #
 ###################################
+def get_nearest_state(position):
+    """Takes a position object and returns the nearest state in its two-letter form"""
+    short_dist = 1000000000
+    short_state = ""
+
+    for state in us_states:
+        # print(us_states[state][0])
+        state_center = find_state_center(us_states[state])
+        curr_short_dist = geo_distance(state_center, position)
+        if curr_short_dist < short_dist:
+            short_dist = curr_short_dist
+            short_state = state
+
+    return short_state
 
 def group_tweets_by_state(tweets):
     """Return a dictionary that aggregates tweets by their nearest state center.
@@ -286,6 +300,8 @@ def group_tweets_by_state(tweets):
     """
     tweets_by_state = {}
     "*** YOUR CODE HERE ***"
+    for tweet in tweets:
+        break
 
     return tweets_by_state
 
