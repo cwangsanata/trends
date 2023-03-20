@@ -213,7 +213,25 @@ def find_centroid(polygon):
     >>> tuple(map(float, find_centroid([p1, p2, p1])))  # A zero-area polygon
     (1.0, 2.0, 0.0)
     """
-    "*** YOUR CODE HERE ***"
+    sum_lat, sum_lon, area = 0, 0, 0
+    num_vertices = len(polygon) - 1
+
+    # Shoelace method for area and using wikipedia page for coordinates
+    for i in range(num_vertices):
+        j = (i + 1) % num_vertices
+        triangle_area = (latitude(polygon[i]) * longitude(polygon[j]) - latitude(polygon[j]) * longitude(polygon[i])) / 2
+        area += triangle_area
+        sum_lat+= (latitude(polygon[i]) + latitude(polygon[j])) * triangle_area
+        sum_lon += (longitude(polygon[i]) + longitude(polygon[j])) * triangle_area
+
+    if area != 0:
+        centroid_lat = sum_lat / (3 * area)
+        centroid_lon = sum_lon / (3 * area)
+    else:
+        centroid_lat = latitude(polygon[0])
+        centroid_lon = longitude(polygon[0])
+
+    return centroid_lat, centroid_lon, abs(area)
 
 def find_state_center(polygons):
     """Compute the geographic center of a state, averaged over its polygons.
