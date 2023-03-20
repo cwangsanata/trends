@@ -254,7 +254,15 @@ def find_state_center(polygons):
     >>> round(longitude(hi), 5)
     -156.21763
     """
-    "*** YOUR CODE HERE ***"
+    weighted_lats, weighted_lons, sum_areas = 0, 0, 0
+    for polygon in polygons:
+        weighted_lats += find_centroid(polygon)[0] * find_centroid(polygon)[2]
+        weighted_lons += find_centroid(polygon)[1] * find_centroid(polygon)[2]
+        sum_areas += find_centroid(polygon)[2]
+
+    return make_position(weighted_lats / sum_areas, weighted_lons / sum_areas)
+
+    
 
 
 ###################################
