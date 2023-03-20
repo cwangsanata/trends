@@ -266,11 +266,10 @@ def find_state_center(polygons):
 ###################################
 def get_nearest_state(position):
     """Takes a position object and returns the nearest state in its two-letter form"""
-    short_dist = 1000000000
+    short_dist = float('inf')
     short_state = ""
 
     for state in us_states:
-        # print(us_states[state][0])
         state_center = find_state_center(us_states[state])
         curr_short_dist = geo_distance(state_center, position)
         if curr_short_dist < short_dist:
@@ -299,10 +298,13 @@ def group_tweets_by_state(tweets):
     '"welcome to san francisco" @ (38, -122)'
     """
     tweets_by_state = {}
-    "*** YOUR CODE HERE ***"
+    
     for tweet in tweets:
-        break
-
+        if get_nearest_state(tweet_location(tweet)) not in tweets_by_state:
+            tweet_list = [tweet]
+            tweets_by_state[get_nearest_state(tweet_location(tweet))] = tweet_list
+        else:
+            tweets_by_state[get_nearest_state(tweet_location(tweet))].append(tweet)
     return tweets_by_state
 
 def average_sentiments(tweets_by_state):
@@ -318,7 +320,8 @@ def average_sentiments(tweets_by_state):
     tweets_by_state -- A dictionary from state names to lists of tweets
     """
     averaged_state_sentiments = {}
-    "*** YOUR CODE HERE ***"
+    # for tweet in tweets_by_state:
+    #     average_sentiments[tweets_by_state[]]
     return averaged_state_sentiments
 
 
