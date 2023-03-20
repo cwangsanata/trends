@@ -132,7 +132,6 @@ def make_sentiment(value):
     """
     assert value is None or (value >= -1 and value <= 1), 'Illegal value'
     return {'value': value, 'sentiment': value is not None}
-        
 
 def has_sentiment(s):
     """Return whether sentiment s has a value."""
@@ -262,9 +261,6 @@ def find_state_center(polygons):
 
     return make_position(weighted_lats / sum_areas, weighted_lons / sum_areas)
 
-    
-
-
 ###################################
 # Phase 3: The Mood of the Nation #
 ###################################
@@ -290,6 +286,7 @@ def group_tweets_by_state(tweets):
     """
     tweets_by_state = {}
     "*** YOUR CODE HERE ***"
+
     return tweets_by_state
 
 def average_sentiments(tweets_by_state):
