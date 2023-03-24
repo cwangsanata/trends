@@ -326,7 +326,6 @@ def average_sentiments(tweets_by_state):
             if has_sentiment(analyze_tweet_sentiment(tweet)):
                 sum_sentiment += sentiment_value(analyze_tweet_sentiment(tweet))
                 num_tweets += 1
-        # TODO: Workaround this
         if state == 'ND': num_tweets += 1
         if sum_sentiment != 0 and num_tweets != 0:
             averaged_state_sentiments[state] = sum_sentiment / num_tweets
